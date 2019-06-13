@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Oh! Here we go again!</title>
+  <link rel="stylesheet" href="styles\index.css">
+</head>
+
+<body>
+  <div class="everething">
+    <header>
+      <nav class="menuTop">
+        <a href="" class="menuItem" id="siteName"><img src="" alt="thunderhere"></a>
+        <a href="index.html" class="menuItem">Главная</a>
+        <span class="menuItem" id="hasSub">Медиа грозы<span id="symbDown"> \/</span>
+          <div class="Sub">
+            <a href="photonder.html" class="subItem">Фотографии с грозой</a>
+            <a href="thunculture.html" class="subItem">Картины с грозой</a>
+            <a href="lightpoem.html" class="subItem">Стихи о грозе</a>
+          </div>
+        </span>
+        <a href="watchMyThunder.html" class="menuItem">Увидь грозу</a>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="void"></section>
+      <section class="startIMG">
+        <img src="pics\i.jpg" alt="розыск">
+      </section>
+      <section class="starto">
+        Ну что стоишь о посвященный,
+        Ведь за окном гроза,
+        Вгляни в глаза ей милый
+        И встань на сторону ты зла.
+
+        <section class="slider">
+          <div class="slide">
+            <img src="pics\Blackbeard_tho.png" alt="thun1" class="slidePCR">
+          </div>
+          <div class="slide">
+            <img src="pics\noch-doma-ogni-nebo-oblaka.jpg" alt="thun2" class="slidePCR">
+          </div>
+          <div class="slide">
+            <img src="pics\1380318582-groza-i-molniya-neri_84.jpg" alt="thun3" class="slidePCR">
+          </div>
+          <a class="nextSlide" onclick="nextSlide()">&#10095;</a>
+          <a class="prevSlide" onclick="prevSlide()">&#10094;</a>
+        </section>
+      </section>
+      <section class="AddInfo">
+        Пожалуйста, пройдите наш тест: ссылка(пока нету)
+      </section>
+    </main>
+    <div class="prayActivation" tabindex="0"></div>
+    <div class="prayInsides" id="inActivePray">
+      <section class="prayText">
+        Молись Перуну, <br /> смертный!
+      </section>
+      <button type="button" name="pray" class="pray" >Молиться</button>
+    </div>
+    <footer>Copyright Лучик(c) <span id="year"></span> Copyright Holder All Rights Reserved.</footer>
+  </div>
+  <script type="text/javascript" src="scripts/screen-size.js"></script>
+  <script type="text/javascript">
+    date = new Date;
+    document.getElementById('year').innerHTML = date.getFullYear();
+  </script>
+  <script type="text/javascript" src="scripts\prayGods.js">
+
+  </script>
+  <script type="text/javascript" src="scripts\slider.js">
+
+  </script>
+</body>
+<!-- stylus -->
+</html>
