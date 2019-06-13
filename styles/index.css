@@ -1,7 +1,7 @@
 body {
   overflow: visible;
   background-color: #333333;
-  background-image: url("C:/Users/super/OneDrive/Документы/APr/project-whiteList/pics/rain2.png");
+  background-image: url("/pics/rain2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
