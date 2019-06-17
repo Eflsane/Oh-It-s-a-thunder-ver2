@@ -1,7 +1,7 @@
 body {
   overflow: visible;
   background-color: #333333;
-  background-image: url("/pics/rain2.png");
+  background-image: url("../pics/rain2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -96,6 +96,70 @@ main {
   height: 3rem;
 }
 
+.audPlayerBlock {
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 4%;
+  width: 30rem;
+  margin: auto;
+}
+
+.buttonsForPlayer {
+
+}
+
+#audLeft {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+
+#audLeft:hover {
+  color: grey;
+}
+
+#audRight {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+
+#audRight:hover {
+  color: grey;
+}
+
+#audPlay {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding-left: 0.4rem;
+  cursor: pointer;
+}
+
+#audPlay:hover {
+  color: grey;
+}
+
+#audStop {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  font-weight: bolder;
+  padding: 0.0rem 0.8rem 0.2rem 0.8rem;
+  cursor: pointer;
+}
+
+#audStop:hover {
+  color: grey;
+}
+
+#audAdd {
+  cursor: pointer;
+}
+
+#audAdd:hover {
+  color: red;
+}
+
 .startIMG {
   text-align: center;
   position: relative;
@@ -160,7 +224,6 @@ main {
 
 
 .AddInfo {
-  background-color: #0d0f15;
 }
 
 .thunderhere > img {
@@ -190,13 +253,17 @@ main {
 #activePray {
   display: block;
   position: fixed;
-  bottom: 17%;
-  right: 6%;
+  bottom: 18.5%;
+  right: 5.76%;
   height: 20rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 60, 0.8);
   font-size: 1.8em;
   text-align: center;
   border-radius: 0 0 10% 10%;
+  border: 1;
+  border-top: 0;
+  border-style: solid;
+  border-color: blue;
 }
 
 .pray {
