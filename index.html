@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="everething">
+
     <header>
       <nav class="menuTop">
         <a href="" class="menuItem" id="siteName"><img src="" alt="thunderhere"></a>
@@ -23,8 +23,21 @@
         <a href="watchMyThunder.html" class="menuItem">Увидь грозу</a>
       </nav>
     </header>
+    <div class="everething">
     <main class="main">
       <section class="void"></section>
+      <section class="audPlayerBlock">
+        <audio src="" id="myPlayer"></audio>
+        <div id="playNow"></div>
+        <div class="buttonsForPlayer">
+          <span id="audLeft">◅</span>
+          <span id="audPlay">&#9658;</span>
+          <span id="audStop">||</span>
+          <span id="audRight">▻</span>
+        </div>
+        <div class="playerMisc"> <span id="playTime"></span> <progress id="audProgress" value="0" max="100" contenteditable="true"></progress> <span id="playEndTime"></span> </div>
+        <div id="audAdd">Добавь больше музыки!</div>
+      </section>
       <section class="startIMG">
         <img src="pics\i.jpg" alt="розыск">
       </section>
@@ -33,7 +46,6 @@
         Ведь за окном гроза,
         Вгляни в глаза ей милый
         И встань на сторону ты зла.
-
         <section class="slider">
           <div class="slide">
             <img src="pics\Blackbeard_tho.png" alt="thun1" class="slidePCR">
@@ -59,8 +71,9 @@
       </section>
       <button type="button" name="pray" class="pray" >Молиться</button>
     </div>
-    <footer>Copyright Лучик(c) <span id="year"></span> Copyright Holder All Rights Reserved.</footer>
+    <footer>Copyright Лучик(c) <span id="year"></span> Если вы владелец чего-то, что представленно здесь и вам это не нравится, обращайтесь.</footer>
   </div>
+  <script type="text/javascript" src="scripts\audPlayer.js"></script>
   <script type="text/javascript" src="scripts/screen-size.js"></script>
   <script type="text/javascript">
     date = new Date;
