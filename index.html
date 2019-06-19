@@ -3,15 +3,19 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible">
   <title>Oh! Here we go again!</title>
-  <link rel="stylesheet" href="styles\index.css">
+  <link rel="stylesheet" href="styles/index.css" id="mainStyle">
+  <link rel="stylesheet" href="styles/mobile.css">
 </head>
 
 <body>
 
     <header>
-      <nav class="menuTop">
-        <a href="" class="menuItem" id="siteName"><img src="" alt="thunderhere"></a>
+      <nav class="menuTop" id="menuTops">
+        <a class="menuItem" id="siteName"><img src="" alt="thunderhere"></a>
+        <a class="menuItem" id="hamb" tabindex="0">П</a>
         <a href="index.html" class="menuItem">Главная</a>
         <span class="menuItem" id="hasSub">Медиа грозы<span id="symbDown"> \/</span>
           <div class="Sub">
@@ -35,7 +39,7 @@
           <span id="audStop">||</span>
           <span id="audRight">▻</span>
         </div>
-        <div class="playerMisc"> <span id="playTime"></span> <progress id="audProgress" value="0" max="100" contenteditable="true"></progress> <span id="playEndTime"></span> </div>
+        <div class="playerMisc"> <span id="playTime"></span> <progress id="audProgress" value="0" max="100" contenteditable="false"></progress> <span id="playEndTime"></span> </div>
         <div id="audAdd">Добавь больше музыки!</div>
       </section>
       <section class="startIMG">
@@ -61,7 +65,7 @@
         </section>
       </section>
       <section class="AddInfo">
-        Пожалуйста, пройдите наш тест: ссылка(пока нету)
+        Пожалуйста, пройдите наш тест: <a href="test.html">Ссылка</a>
       </section>
     </main>
     <div class="prayActivation" tabindex="0"></div>
@@ -71,20 +75,18 @@
       </section>
       <button type="button" name="pray" class="pray" >Молиться</button>
     </div>
-    <footer>Copyright Лучик(c) <span id="year"></span> Если вы владелец чего-то, что представленно здесь и вам это не нравится, обращайтесь.</footer>
+    <footer>Copyright Лучик(c) <span id="year"></span> Если вы владелец чего-то, что представленно здесь и вам это не нравится, обращайтесь. <span id="newStyle">Тык</span> </footer>
   </div>
+  <script type="text/javascript" src="scripts\styleChanger.js"></script>
+  <!-- <script type="text/javascript" src="scripts\haburger(ok im an idiot).js"></script> -->
   <script type="text/javascript" src="scripts\audPlayer.js"></script>
-  <script type="text/javascript" src="scripts/screen-size.js"></script>
+  <!-- <script type="text/javascript" src="scripts\screen-size.js"></script> -->
   <script type="text/javascript">
     date = new Date;
     document.getElementById('year').innerHTML = date.getFullYear();
   </script>
-  <script type="text/javascript" src="scripts\prayGods.js">
-
-  </script>
-  <script type="text/javascript" src="scripts\slider.js">
-
-  </script>
+  <script type="text/javascript" src="scripts\prayGods.js"></script>
+  <script type="text/javascript" src="scripts\slider.js"></script>
 </body>
 <!-- stylus -->
 </html>

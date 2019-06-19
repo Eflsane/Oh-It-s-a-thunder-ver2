@@ -1,0 +1,47 @@
+@media (max-width: 1140px) {
+  .menuTop:hover > .menuItem {display: block;}
+  .menuItem {display: none;}
+  #siteName {display: block; position: static;}
+  #hamb {display: inline-block;}
+  #hasSub {text-decoration: none;}
+  .Sub {position: static; height: auto;  font-size: 1em; padding: 0rem; transition: 0s;}
+  #hasSub:hover > div {height: auto; font-size: 1em; padding: 0rem;}
+}
+
+@media (max-width: 1024px) {
+  .audPlayerBlock {width: 60%;}
+  .startIMG > img {width: 70%;}
+  .slider {width: 90%; margin: auto; }
+  .slide {width: 100%;}
+  .slider > .prevSlide, .slider > .nextSlide {top: 50%}
+  .slider > .slide > .slidePCR {width: 100%;}
+  .slider > .prevSlide {left: 0%;}
+  .slider > .nextSlide {right: 0%;}
+}
+
+@media (max-width: 900px) {
+  .audPlayerBlock {width: 80%;}
+  .startIMG > img {width: 89%;}
+  .slider {width: 90%; margin: auto; }
+  .slide {width: 100%;}
+  .slider > .prevSlide, .slider > .nextSlide {top: 40%}
+  .slider > .slide > .slidePCR {width: 110%;}
+  .slider > .prevSlide {left: 0%;}
+  .slider > .nextSlide {right: -10.1%;}
+  .starto {font-size: 1.5em;}
+}
+
+
+@media (max-width: 600px) {
+  .menuTop {font-size: 1.6em;}
+  .audPlayerBlock {width: 98%;}
+  .startIMG > img {width: 86%;}
+  .slider {max-width: 90%; margin: auto;}
+  .slide  {width: 90%; align-self: center;}
+  .slider > .prevSlide, .slider > .nextSlide {top: 40%}
+  .slider > .slide > .slidePCR {width: 110%;}
+  .slider > .prevSlide {left: 0%;}
+  .slider > .nextSlide {right: 1.2%;}
+  .starto {font-size: 0.8em;}
+  .buttonPoem {font-size: 0.8em;}
+}

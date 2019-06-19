@@ -3,17 +3,21 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Oh! It's a good day to fuck everything!</title>
-  <link rel="stylesheet" href="styles\index.css">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible">
+  <title>Oh! Here we go again!</title>
+  <link rel="stylesheet" href="styles/index.css" id="mainStyle">
+  <link rel="stylesheet" href="styles/mobile.css">
 </head>
 
 <body>
-  <div class="everething">
+
     <header>
-      <nav class="menuTop">
-        <a href="" class="menuItem">Thunder here</a>
+      <nav class="menuTop" id="menuTops">
+        <a class="menuItem" id="siteName"><img src="" alt="thunderhere"></a>
+        <a class="menuItem" id="hamb" tabindex="0">П</a>
         <a href="index.html" class="menuItem">Главная</a>
-        <span class="menuItem" id="hasSub">Медиа грозы
+        <span class="menuItem" id="hasSub">Медиа грозы<span id="symbDown"> \/</span>
           <div class="Sub">
             <a href="photonder.html" class="subItem">Фотографии с грозой</a>
             <a href="thunculture.html" class="subItem">Картины с грозой</a>
@@ -23,26 +27,80 @@
         <a href="watchMyThunder.html" class="menuItem">Увидь грозу</a>
       </nav>
     </header>
+    <div class="everething">
     <main class="main">
       <section class="void"></section>
+      <section class="audPlayerBlock">
+        <audio src="" id="myPlayer"></audio>
+        <div id="playNow"></div>
+        <div class="buttonsForPlayer">
+          <span id="audLeft">◅</span>
+          <span id="audPlay">&#9658;</span>
+          <span id="audStop">||</span>
+          <span id="audRight">▻</span>
+        </div>
+        <div class="playerMisc"> <span id="playTime"></span> <progress id="audProgress" value="0" max="100" contenteditable="false"></progress> <span id="playEndTime"></span> </div>
+        <div id="audAdd">Добавь больше музыки!</div>
+      </section>
       <section class="startIMG">
         <img src="pics\i.jpg" alt="розыск">
       </section>
       <section class="starto">
+        <div class="buttonPoem">Александр Блок - Гроза</div>
+        <article class="poems" style="font-size: 0;">
+          Гроза прошла, и ветка белых роз
+          В окно мне дышит ароматом…
+          Еще трава полна прозрачных слез,
+          И гром вдали гремит раскатом.
+        </article>
+        <div class="buttonPoem">Фёдор Тютчев - Весенняя гроза</div>
+        <article class="poems" style="font-size: 0;">
+          Люблю грозу в начале мая,
+          Когда весенний, первый гром,
+          как бы резвяся и играя,
+          Грохочет в небе голубом.
 
-      </section>
-      <section class="AddInfo">
+          Гремят раскаты молодые,
+          Вот дождик брызнул, пыль летит,
+          Повисли перлы дождевые,
+          И солнце нити золотит.
+
+          С горы бежит поток проворный,
+          В лесу не молкнет птичий гам,
+          И гам лесной и шум нагорный -
+          Все вторит весело громам.
+
+          Ты скажешь: ветреная Геба,
+          Кормя Зевесова орла,
+          Громокипящий кубок с неба,
+          Смеясь, на землю пролила.
+        </article>
+        <div class="buttonPoem">Лучик - Молния</div>
+        <article class="poems" style="font-size: 0;">
+          Лаская подбородок, ты выгляни в окно,
+          увидишь там сияние - волшебное оно.
+        </article>
       </section>
     </main>
-    <footer>Copyright Лучик(c) <span id="year"></span> Copyright Holder All Rights Reserved.</footer>
+    <div class="prayActivation" tabindex="0"></div>
+    <div class="prayInsides" id="inActivePray">
+      <section class="prayText">
+        Молись Перуну, <br /> смертный!
+      </section>
+      <button type="button" name="pray" class="pray" >Молиться</button>
+    </div>
+    <footer>Copyright Лучик(c) <span id="year"></span> Если вы владелец чего-то, что представленно здесь и вам это не нравится, обращайтесь. <span id="newStyle">Тык</span> </footer>
   </div>
+  <script type="text/javascript" src="scripts\styleChanger.js"></script>
+  <!-- <script type="text/javascript" src="scripts\haburger(ok im an idiot).js"></script> -->
+  <script type="text/javascript" src="scripts\audPlayer.js"></script>
+  <!-- <script type="text/javascript" src="scripts\screen-size.js"></script> -->
   <script type="text/javascript">
     date = new Date;
     document.getElementById('year').innerHTML = date.getFullYear();
   </script>
-  <script type="text/javascript" src="scripts\slider.js">
-
-  </script>
+  <script type="text/javascript" src="scripts\prayGods.js"></script>
+  <script type="text/javascript" src="scripts\poems.js"></script>
 </body>
 
 </html>

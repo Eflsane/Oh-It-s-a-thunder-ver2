@@ -8,6 +8,7 @@
   <title>Oh! Here we go again!</title>
   <link rel="stylesheet" href="styles/index.css" id="mainStyle">
   <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/test.css">
 </head>
 
 <body>
@@ -45,27 +46,53 @@
       <section class="startIMG">
         <img src="pics\i.jpg" alt="розыск">
       </section>
-      <section class="starto">
-        Ну что стоишь о посвященный,
-        Ведь за окном гроза,
-        Вгляни в глаза ей милый
-        И встань на сторону ты зла.
-        <section class="slider">
-          <div class="slide">
-            <img src="pics\Blackbeard_tho.png" alt="thun1" class="slidePCR">
-          </div>
-          <div class="slide">
-            <img src="pics\noch-doma-ogni-nebo-oblaka.jpg" alt="thun2" class="slidePCR">
-          </div>
-          <div class="slide">
-            <img src="pics\1380318582-groza-i-molniya-neri_84.jpg" alt="thun3" class="slidePCR">
-          </div>
-          <a class="nextSlide" onclick="nextSlide()">&#10095;</a>
-          <a class="prevSlide" onclick="prevSlide()">&#10094;</a>
-        </section>
-      </section>
       <section class="AddInfo">
-        Пожалуйста, пройдите наш тест: ссылка(пока нету)
+        <p id = "begining">Ответьте на вопросы</p>
+        <div class="quest1">
+          <p>question 1:</p>
+          <p>С какой вероятностью в вас ударит молния?</p>
+          <section>
+            <p><input type="radio" name="que1" value="" onclick="answer0()"> 1:1 Я поймаю! </p>
+            <p><input type="radio" name="que1" value="" onclick="answer0()"> 1:6000 </p>
+            <p><input type="radio" name="que1" value="" onclick="answer0()"> 1:3000 </p>
+            <p><input type="radio" name="que1" value="" onclick="answer0()"> 1:2000000 </p>
+          </section>
+        </div>
+        <div class="quest2">
+          <p>question 2:</p>
+          <p>Какому богу вы молитесь для вызова молнии?</p>
+          <section>
+            <p><input type="radio" name="que2" value="" onclick="answer1()"> Зевсу </p>
+            <p><input type="radio" name="que2" value="" onclick="answer1()"> Здесь должон быть ещё один бог, но 228 </p>
+            <p><input type="radio" name="que2" value="" onclick="answer1()"> Перуну </p>
+            <p><input type="radio" name="que2" value="" onclick="answer1()"> Зачем её вызывать? </p>
+          </section>
+        </div>
+        <div class="quest3">
+          <p>question 3:</p>
+          <p>Что вы чувствуете, когда слышите гром?</p>
+          <section>
+            <p><input type="radio" name="que3" value="" onclick="answer2()"> Гордость за моего бога (Перуна!) </p>
+            <p><input type="radio" name="que3" value="" onclick="answer2()"> Страх </p>
+            <p><input type="radio" name="que3" value="" onclick="answer2()"> Радость, любовь моего бога летит в меня! </p>
+            <p><input type="radio" name="que3" value="" onclick="answer2()"> Желание не слышать </p>
+          </section>
+        </div>
+        <div class="quest4">
+          <p>question 4:</p>
+          <p>Переведите с непонятности: Ⰿⱁⰾⰹⱄⱐ ⰲⰵⰾⰹⰽⱁⰿⱆ Ⱂⰵⱃⱆⱀⱆ!</p>
+          <section>
+            <p><input type="radio" name="que4" value="" onclick="answer3()"> Слава грозе! </p>
+            <p><input type="radio" name="que4" value="" onclick="answer3()"> "Непереводимая ересь" </p>
+            <p><input type="radio" name="que4" value="" onclick="answer3()"> Молись великому Перуну! </p>
+            <p><input type="radio" name="que4" value="" onclick="answer3()"> *Вы ищите выход, но он один - окно! </p>
+          </section>
+        </div>
+          <div class="result">
+            <p>results:</p>
+            <section id="concl">
+            </section>
+          </div>
       </section>
     </main>
     <div class="prayActivation" tabindex="0"></div>
@@ -86,7 +113,7 @@
     document.getElementById('year').innerHTML = date.getFullYear();
   </script>
   <script type="text/javascript" src="scripts\prayGods.js"></script>
-  <script type="text/javascript" src="scripts\slider.js"></script>
+  <script type="text/javascript" src="scripts\test.js"></script>
 </body>
-
+<!-- stylus -->
 </html>

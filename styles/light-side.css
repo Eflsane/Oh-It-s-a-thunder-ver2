@@ -10,7 +10,7 @@
 body {
   overflow: visible;
   background-color: #333333;
-  background-image: url("../pics/rain2.png");
+  background-image: url("../pics/clear-skies.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -36,7 +36,7 @@ body {
   left: 0;
   right: 0;
   font-size: 2.8em;
-  background-color: black;
+  background-color: rgb(0, 90, 150);
   opacity: 0.82;
   color: white;
   z-index: 1000;
@@ -87,7 +87,7 @@ body {
   left: 0;
   transition: 0.9s;
   border-radius: 10%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0, 90, 150);
   width: 100%;
 }
 
