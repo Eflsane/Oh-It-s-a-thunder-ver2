@@ -292,7 +292,7 @@ main {
 #bigImgCross {
   position: absolute;
   top: 100%;
-  right: 1%;
+  right: 3.8%;
   font-size: 150%;
   color: red;
   cursor: pointer;

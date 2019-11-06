@@ -251,8 +251,6 @@ main {
   border-radius: 2.5%;
 }
 
-
-
 .AddInfo {
   font-family: "notperfect regular";
 }
@@ -270,6 +268,35 @@ main {
 .poems {
   height: auto;
   transition: 0.9s;
+}
+
+.inPicsPage {
+  width: 45%;
+  height: 45%;
+  cursor: pointer;
+}
+
+#bigImgBlock {
+  position: relative;
+  padding-right: 100%;
+  padding-top: 4.5%;
+  z-index: 4;
+}
+
+#bigImg {
+  position: absolute;
+  width: 96%;
+  border: 5px solid grey;
+}
+
+#bigImgCross {
+  position: absolute;
+  top: 100%;
+  right: 3.8%;
+  font-size: 150%;
+  color: red;
+  cursor: pointer;
+  z-index: 5;
 }
 
 .prayActivation {
