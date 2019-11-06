@@ -1,9 +1,14 @@
-const audSrc = [
-  { src: 'https://cdndl.zaycev.net/421074/2257950/kai_rosenkranz_-_nature_1_theme_%28zaycev.net%29.mp3?ext.page=default', name: 'Kai Rosenkranz - Nature' },
-  { src: 'https://www.ostmusic.org/?view=file&format=raw&id=12694', name: 'Dynamedion - Risen Farewell' },
-  { src: 'https://cdnet2.mixmuz.ru/3782a83b9cd4/ed22ff22b0/ca1e41abd4b8bcaf841895681d51218a-ef0d409-11f59g34-1-178ae1727a07/XXXtentation%20%E2%80%94%20Numb.mp3', name: 'XXXTentation - Numb' },
-  { src: 'https://cdndl.zaycev.net/124722/1345401/nervy_-_eyo_imya_%28zaycev.net%29.mp3?ext.page=default', name: 'Нервы - Её имя' },
-];
+let audSrc = [];
+if (!localStorage.getItem('thunderPlaylist')) {
+  audSrc = [
+    { src: 'https://cdndl.zaycev.net/421074/2257950/kai_rosenkranz_-_nature_1_theme_%28zaycev.net%29.mp3?ext.page=default', name: 'Kai Rosenkranz - Nature' },
+    { src: 'https://www.ostmusic.org/?view=file&format=raw&id=12694', name: 'Dynamedion - Risen Farewell' },
+    { src: 'https://cdnet2.mixmuz.ru/3782a83b9cd4/ed22ff22b0/ca1e41abd4b8bcaf841895681d51218a-ef0d409-11f59g34-1-178ae1727a07/XXXtentation%20%E2%80%94%20Numb.mp3', name: 'XXXTentation - Numb' },
+    { src: 'https://cdndl.zaycev.net/124722/1345401/nervy_-_eyo_imya_%28zaycev.net%29.mp3?ext.page=default', name: 'Нервы - Её имя' },
+  ];
+} else {
+  audSrc = JSON.parse(localStorage.getItem('thunderPlaylist'));
+}
 const aud = document.getElementById('myPlayer');
 const playNow = document.getElementById('playNow');
 const playTime = document.getElementById('playTime');
@@ -29,6 +34,7 @@ function audStop() {
 
 function audPrev() {
   audStop();
+  clearTime();
   i -= 1;
   if (i < 0) i = audSrc.length - 1;
   aud.src = audSrc[i].src;
@@ -38,6 +44,7 @@ function audPrev() {
 
 function audNext() {
   audStop();
+  clearTime();
   i += 1;
   if (i >= audSrc.length) i = 0;
   aud.src = audSrc[i].src;
@@ -54,6 +61,8 @@ function addMus() {
   const src = prompt('Адрес композиции', 'https://');
   const name = prompt('Название композиции', '');
   audSrc.push({ src, name });
+  localStorage.setItem('thunderPlaylist', JSON.stringify(audSrc));
+  clearTime();
   i = audSrc.length - 1;
   aud.src = audSrc[i].src;
   playNow.innerHTML = audSrc[i].name;
@@ -62,6 +71,8 @@ function addMus() {
 function notAnAudio() {
   alert('Адрес указан неверно или отсутствует доступ к файлу');
   audSrc.pop();
+  localStorage.setItem('thunderPlaylist', JSON.stringify(audSrc));
+  clearTime();
   i = 0;
   aud.src = audSrc[i].src;
   playNow.innerHTML = audSrc[i].name;
@@ -73,12 +84,20 @@ function audEnd() {
 
 function getDuration() {
   const endTime = aud.duration;
+  sec = 0;
+}
+
+function delMus() {
+  audSrc.splice(i, 1);
+  localStorage.setItem('thunderPlaylist', JSON.stringify(audSrc));
+  audPrev();
 }
 
 document.getElementById('audAdd').addEventListener('click', addMus);
 document.getElementById('myPlayer').addEventListener('error', notAnAudio);
 document.getElementById('myPlayer').addEventListener('ended', audEnd);
 document.getElementById('myPlayer').addEventListener('loadedmetadata', getDuration);
+document.getElementById('audDel').addEventListener('click', delMus);
 
 function audDuration() {
   const endTimeSec = Math.floor(aud.duration);
@@ -97,12 +116,12 @@ function audCurTime() {
 }
 
 function clearTime() {
-  sec = 0;
   clearInterval(timerId);
 }
 
 aud.addEventListener('loadeddata', audDuration);
-aud.addEventListener('loadeddata', audCurTime);
+aud.addEventListener('play', audCurTime);
+aud.addEventListener('pause', clearTime);
 aud.addEventListener('ended', clearTime);
 aud.addEventListener('play', () => {
   paused = false;
@@ -110,7 +129,3 @@ aud.addEventListener('play', () => {
 aud.addEventListener('pause', () => {
   paused = true;
 });
-
-document.getElementById('audLeft').addEventListener('click', clearTime);
-document.getElementById('audRight').addEventListener('click', clearTime);
-document.getElementById('audAdd').addEventListener('click', clearTime);

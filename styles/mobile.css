@@ -45,3 +45,12 @@
   .starto {font-size: 0.8em;}
   .buttonPoem {font-size: 0.8em;}
 }
+
+@media (max-height: 900px) {
+  #bigImgBlock {padding-top: 5%;}
+}
+
+@media (max-height: 600px) {
+  #bigImgBlock {padding-top: 7.9%;}
+  #activePray {height: 15rem; font-size: 1.4em;}
+}

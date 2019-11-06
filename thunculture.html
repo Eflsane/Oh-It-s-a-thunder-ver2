@@ -40,32 +40,14 @@
           <span id="audRight">▻</span>
         </div>
         <div class="playerMisc"> <span id="playTime"></span> <progress id="audProgress" value="0" max="100" contenteditable="false"></progress> <span id="playEndTime"></span> </div>
-        <div id="audAdd">Добавь больше музыки!</div>
+        <div class="addDel" id="audAdd">Добавь больше музыки!</div>
+        <div class="addDel" id="audDel">Удалить композицию</div>
       </section>
       <section class="startIMG">
         <img src="pics\i.jpg" alt="розыск">
       </section>
-      <section class="starto">
-        Ну что стоишь о посвященный,
-        Ведь за окном гроза,
-        Вгляни в глаза ей милый
-        И встань на сторону ты зла.
-        <section class="slider">
-          <div class="slide">
-            <img src="pics\Blackbeard_tho.png" alt="thun1" class="slidePCR">
-          </div>
-          <div class="slide">
-            <img src="pics\noch-doma-ogni-nebo-oblaka.jpg" alt="thun2" class="slidePCR">
-          </div>
-          <div class="slide">
-            <img src="pics\1380318582-groza-i-molniya-neri_84.jpg" alt="thun3" class="slidePCR">
-          </div>
-          <a class="nextSlide" onclick="nextSlide()">&#10095;</a>
-          <a class="prevSlide" onclick="prevSlide()">&#10094;</a>
-        </section>
-      </section>
-      <section class="AddInfo">
-        Пожалуйста, пройдите наш тест: ссылка(пока нету)
+      <section class="picsPage">
+        <img src="pics/20-211310402992526.jpg" alt="thun1" class="inPicsPage">
       </section>
     </main>
     <div class="prayActivation" tabindex="0"></div>
@@ -85,8 +67,8 @@
     date = new Date;
     document.getElementById('year').innerHTML = date.getFullYear();
   </script>
+  <script type="text/javascript" src="scripts\picsLarger.js"></script>
   <script type="text/javascript" src="scripts\prayGods.js"></script>
-  <script type="text/javascript" src="scripts\slider.js"></script>
 </body>
 
 </html>
